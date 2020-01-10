@@ -11,13 +11,28 @@
     <module>lifesuite-common</module>
     <module>lifesuite-api</module>
     <module>lifesuite-import</module>
+    <module>lifesuite-domain</module>
   </modules>
+
+  <properties>
+    <maven.deploy.skip>true</maven.deploy.skip>
+    <lifesuite-common.version>1.0-SNAPSHOT</lifesuite-common.version>
+    <lifesuite-domain.version>1.0-SNAPSHOT</lifesuite-domain.version>
+  </properties>
 
   <repositories>
     <repository>
       <id>lifesuite-nexus</id>
       <name>lifesuite nexus</name>
-      <url>http://localhost:8081/nexus/content/groups/lifesuite/</url>
+      <url>http://localhost:8081/nexus/content/repositories/lifesuite-release/</url>
     </repository>
   </repositories>
+
+  <distributionManagement>
+     <repository>
+       <id>lifesuite-nexus</id>
+       <url>http://localhost:8081/nexus/content/repositories/lifesuite-test2/</url>
+     </repository>
+  </distributionManagement>
+
 </project>

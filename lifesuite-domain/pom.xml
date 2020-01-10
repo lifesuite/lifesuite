@@ -8,20 +8,10 @@
   </parent>
 
   <groupId>com.lifesuite</groupId>
-  <artifactId>lifesuite-api</artifactId>
+  <artifactId>lifesuite-domain</artifactId>
   <version>1.0-SNAPSHOT</version>
-  
+
   <dependencies>
-     <dependency>
-      <groupId>com.lifesuite</groupId>
-      <artifactId>lifesuite-domain</artifactId>
-      <version>${lifesuite-domain.version}</version>
-    </dependency> 
-    <dependency>
-      <groupId>com.lifesuite</groupId>
-      <artifactId>lifesuite-common</artifactId>
-      <version>${lifesuite-common.version}</version>
-    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -29,6 +19,10 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  <properties>
+    <maven.deploy.skip>false</maven.deploy.skip>
+  </properties>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
