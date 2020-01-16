@@ -1,1 +1,2 @@
-/home/sean/Programming/lifesuite/lifesuite-api/src/main/java/com/lifesuite/App.java
+/home/sean/Programming/lifesuite/lifesuite-api/src/main/java/com/lifesuite/api/config/SpringFoxConfig.java
+/home/sean/Programming/lifesuite/lifesuite-api/src/main/java/com/lifesuite/api/LifeSuiteApi.java
