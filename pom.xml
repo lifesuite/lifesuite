@@ -1,47 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.0.2.RELEASE</version>
-    <relativePath/>
-  </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.2.RELEASE</version>
+		<relativePath />
+	</parent>
 
 
-  <groupId>com.lifesuite</groupId>
-  <artifactId>lifesuite</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+	<groupId>com.lifesuite</groupId>
+	<artifactId>lifesuite</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
-  <modules>
-    <module>lifesuite-common</module>
-    <module>lifesuite-api</module>
-    <module>lifesuite-etl</module>
-    <module>lifesuite-domain</module>
-  </modules>
+	<modules>
+		<module>lifesuite-common</module>
+		<module>lifesuite-api</module>
+		<module>lifesuite-etl</module>
+		<module>lifesuite-domain</module>
+		<module>food-api</module>
+	</modules>
 
-  <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.deploy.skip>true</maven.deploy.skip>
-    <lifesuite-common.version>1.0-SNAPSHOT</lifesuite-common.version>
-    <lifesuite-domain.version>1.0-SNAPSHOT</lifesuite-domain.version>
-  </properties>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.deploy.skip>true</maven.deploy.skip>
+		<lifesuite-common.version>${project.version}</lifesuite-common.version>
+		<lifesuite-domain.version>${project.version}</lifesuite-domain.version>
+		<food-api.version>${project.version}</food-api.version>
+	</properties>
 
-  <repositories>
-    <repository>
-      <id>lifesuite-nexus</id>
-      <name>lifesuite nexus</name>
-      <url>http://localhost:8081/nexus/content/repositories/lifesuite-release/</url>
-    </repository>
-  </repositories>
 
-  <distributionManagement>
-     <repository>
-       <id>lifesuite-nexus</id>
-       <url>http://localhost:8081/nexus/content/repositories/lifesuite-test2/</url>
-     </repository>
-  </distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>lifesuite-nexus</id>
+			<name>lifesuite nexus</name>
+			<url>http://localhost:8081/nexus/content/groups/lifesuite</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>lifesuite-nexus-snapshots</id>
+			<url>http://localhost:8081/nexus/content/repositories/lifesuite-snapshot/</url>
+		</snapshotRepository>
+		<repository>
+			<id>lifesuite-nexus</id>
+			<url>http://localhost:8081/nexus/content/repositories/lifesuite-release/</url>
+		</repository>
+	</distributionManagement>
 
 </project>

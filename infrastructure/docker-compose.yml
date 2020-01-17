@@ -7,7 +7,17 @@ services:
       - "nexus-data:/sonatype-work"
     ports:
       - "8081:8081"
-
+  neo4j:
+    image: graphfoundation/ongdb
+    environment:
+      - NEO4J_dbms_active__database=${NEO4J_dbms_active__database}
+    volumes:
+      - "${NEO4J_HOME}/data:/data/"
+    ports:
+      - "7474:7474"
+      - "7687:7687"
 
 volumes:
   nexus-data: {}
+  neo4j-data: {}
+  sql-data: {}

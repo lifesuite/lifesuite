@@ -17,7 +17,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication(scanBasePackages = "com.lifesuite.api")
-public class LifeSuiteApi 
+public class LifeSuiteApi
 {
     public static void main( String[] args )
     {

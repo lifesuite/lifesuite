@@ -9,12 +9,30 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>lifesuite-domain</artifactId>
+	<artifactId>food-api</artifactId>
+
+	<properties>
+		<maven.deploy.skip>false</maven.deploy.skip>
+	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.neo4j</groupId>
-			<artifactId>neo4j-ogm-core</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-neo4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.lifesuite</groupId>
+			<artifactId>lifesuite-domain</artifactId>
+			<version>${lifesuite-domain.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.lifesuite</groupId>
+			<artifactId>lifesuite-common</artifactId>
+			<version>${lifesuite-common.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -23,10 +41,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<properties>
-		<maven.deploy.skip>false</maven.deploy.skip>
-	</properties>
 
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
@@ -74,4 +88,5 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+
 </project>
